@@ -1,7 +1,6 @@
 public class LogLevels {
     public static void main(String [] args){
-        LogLevels message= new LogLevels();
-        message.details();
+        details();
     }
     public static String message(String longLine){
         //Create an array separed by : 
@@ -23,7 +22,7 @@ public class LogLevels {
         String logLineMessage= message(message)+" ("+logLevel(message)+")";
         return logLineMessage;
     }
-    public void details(){
+    public static void details(){
         System.out.println(reformat("[INFO]: Operation completed"));
     }
     

@@ -1,10 +1,9 @@
 public class CarsAssemble {
     public static void main (String []args){
-        CarsAssemble myYard= new CarsAssemble();
-        System.out.println("Production rate per hour: "+ myYard.productionRatePerHour(1));
-        System.out.println("Productions rate per minute: "+myYard.workingItemsPerMinute(1));
+        System.out.println("Production rate per hour: "+ productionRatePerHour(1));
+        System.out.println("Productions rate per minute: "+workingItemsPerMinute(1));
     }
-    public double productionRatePerHour(int speed){
+    public static double productionRatePerHour(int speed){
             if(speed<=4){
                 return speed*221*1.0;
             }
@@ -21,7 +20,7 @@ public class CarsAssemble {
                 return 0;
             }
     }
-    public int workingItemsPerMinute(int speed){
+    public static int workingItemsPerMinute(int speed){
         if(speed>0){
             return (int) Math.floor(productionRatePerHour(speed)/60);
         }else{

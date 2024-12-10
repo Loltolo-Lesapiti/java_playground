@@ -1,21 +1,20 @@
 public class Lasagna{
     public static void main (String [] args){
-        Lasagna dish= new Lasagna();
-        dish.details();
+        details();
     }
-    public int expectedMinutesInOven(){
+    public static int expectedMinutesInOven(){
         return 40;
     }
-    public int remainingMinutesInOven(int minutes){
+    public static int remainingMinutesInOven(int minutes){
         return (expectedMinutesInOven()-minutes);
     }
-    public int preparationTimeInMinutes(int layers){
+    public static int preparationTimeInMinutes(int layers){
         return layers * 2;
     }
-    public int totalTimeInMinutes(int layers, int minutes){
+    public static int totalTimeInMinutes(int layers, int minutes){
         return preparationTimeInMinutes(layers) + minutes;
     }
-    public void details(){
+    public static void details(){
         System.out.println("The expected time in the oven is : "+ expectedMinutesInOven() + " minutes");
         System.out.println("The preparation time is : "+ preparationTimeInMinutes(6) + " minutes");
         System.out.println("The remaining time in the oven is : "+ remainingMinutesInOven(20)+ " minutes");
